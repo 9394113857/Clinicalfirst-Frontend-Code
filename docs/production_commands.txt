@@ -1,0 +1,5 @@
+# Build Angular Application for Production
+ng build --configuration=production
+
+# Purpose: Compiles and bundles an Angular application for production deployment.
+# Description: Running ng build --configuration=production compiles the Angular project into optimized JavaScript and assets suitable for deployment in a production environment. This command triggers ahead-of-time (AOT) compilation, tree shaking, and minification of code to improve performance and reduce bundle size. It generates output in the 'dist' directory by default, ready to be deployed to a web server or cloud hosting platform.
