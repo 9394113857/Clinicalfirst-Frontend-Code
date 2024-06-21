@@ -1,0 +1,4 @@
+when we starts vscode cmd is under root of the project only so accordingly what we understand 
+and we switch to those paths and run accordingly.
+
+

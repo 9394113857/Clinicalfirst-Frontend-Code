@@ -6,7 +6,10 @@ are essential parts of an Angular module and its routing configuration, respecti
 
 =======================================================================================
 
+*** *** ***
+Start commands from here:-
 Switch to:
+1st step:-
 src/app
 ng generate module firstpharmacy # see because of this command folder also creted right
 
@@ -14,7 +17,7 @@ ng generate module firstpharmacy # see because of this command folder also crete
 where you can define module-specific configurations, imports, and providers.
 
 =======================================================================================
-
+2nd step:-
 src/app
 ng generate module firstpharmacy-routing --module=firstpharmacy # routing file will be crted right
 
@@ -22,6 +25,8 @@ ng generate module firstpharmacy-routing --module=firstpharmacy # routing file w
 specifically for routing within the firstpharmacy module.
 
 =======================================================================================
+After we create the above two then next we crete all the components inside 
+by switching to this module under we generate all components etc right.
 
 Now, we crete cpmponents in this path:-
 src/app/firstpharmacy
