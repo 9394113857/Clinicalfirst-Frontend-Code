@@ -1,0 +1,14 @@
+src/environments/
+
+Steps to Create and Configure the environments Folder
+1.	Create the environments Folder:
+o	Navigate to the src directory and create a new folder named environments.
+o	Inside this folder, create two files: environment.ts and environment.prod.ts.
+2.	Define the Environment Configuration:
+o	environment.ts: This file contains the configuration for the development environment.
+o	environment.prod.ts: This file contains the configuration for the production environment.
+
+Update angular.json:
+•	Open the angular.json file in the root of your project.
+•	Ensure the fileReplacements option is configured correctly under the build configurations for production.
+
