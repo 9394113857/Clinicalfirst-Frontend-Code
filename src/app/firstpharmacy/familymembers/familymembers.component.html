@@ -1,1 +1,74 @@
-<p>familymembers works!</p>
+<!-- <body>
+    <div style="display: flex;">
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <app-sidebar></app-sidebar>
+        </div>
+
+
+        <!-- <div class="row" [formGroup]="familyForm">
+            <p class="row-title">Family Members</p>
+            <div class="col-md-2 touch" *ngFor="let item of familyDetails">
+                <nav class="cause-list">
+                    <ul class="nav justified text-center">
+                        <button class="row">
+                            <a class="nav-link">{{item.SUB_PATIENT_NAME}}</a>
+                        </button>
+                    </ul>
+                </nav>
+            </div>
+        </div> 
+
+
+
+        <div class="form-group" [formGroup]="familyForm">
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                <div class="card-header">Family Member</div>
+                <div class="card-body" *ngFor="let item of familyDetails">
+
+                    <p class="card-text">{{item.SUB_PATIENT_NAME}}</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</body> -->
+
+
+
+
+
+<body>
+    <div class="container-fluid custom-container">
+
+        <div class="row" style="display: flex;">
+
+            <div class="col-lg-1 col-md-1 col-sm-1">
+                <app-sidebar></app-sidebar>
+            </div>
+
+            <div class="col-md-11 right-content">
+
+                <div class="row">
+                    <p class="row-title">FAMILY MEMBERS</p>
+                    <div class="col-md-2 touch" *ngFor="let item of familyDetails">
+                        <nav class="cause-list">
+                            <ul class="nav justified text-center">
+                                <li class="row">
+                                    <a class="nav-link" >
+                                        {{item.SUB_PATIENT_NAME}}</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+    </div>
+</body>

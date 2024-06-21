@@ -6,10 +6,14 @@ describe('SecondpageComponent', () => {
   let component: SecondpageComponent;
   let fixture: ComponentFixture<SecondpageComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ SecondpageComponent ]
+    })
+    .compileComponents();
+  });
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [SecondpageComponent]
-    });
     fixture = TestBed.createComponent(SecondpageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

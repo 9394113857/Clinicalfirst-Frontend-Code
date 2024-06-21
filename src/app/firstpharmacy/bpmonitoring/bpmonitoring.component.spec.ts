@@ -6,10 +6,14 @@ describe('BpmonitoringComponent', () => {
   let component: BpmonitoringComponent;
   let fixture: ComponentFixture<BpmonitoringComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ BpmonitoringComponent ]
+    })
+    .compileComponents();
+  });
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [BpmonitoringComponent]
-    });
     fixture = TestBed.createComponent(BpmonitoringComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

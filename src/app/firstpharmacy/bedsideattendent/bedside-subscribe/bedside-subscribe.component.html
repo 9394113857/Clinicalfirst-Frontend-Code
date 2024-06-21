@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Welcome to First Pharmacy</title>
+
+</head>
+
+<body>
+    <div style="display: flex;">
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="container-fluid custom-container">
+
+            <div class="row">
+                <div class="col-md-11 right-content">
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="logo">
+                                <img src="assets/img/logo.png">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6"></div>
+
+                        <div class="col-md-4">
+                            <div class="search-bar">
+                                <div class="form-group has-search">
+                                    <span class="fa fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control" placeholder="SEARCH">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="head-title">
+                                    <div class="media-left ">
+                                        <img src="assets/img/rehabilitation.png" class="mr-3" alt="...">
+                                    </div>
+                                    <h3>Bedside Attendant</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="assets/img/11.png" class="mr-3" alt="...">
+                                    </div>
+                                    <div>
+                                        <div class="head-title" [formGroup]="bedSidesubForm">
+                                            <div class="form-group">
+                                                <div align="right" *ngFor="let item of necDetails" value="item.NEC_ID"
+                                                    style="color: darkblue;" name="NEC_ID" id="NEC_ID"
+                                                    formControlName="NEC_ID">
+                                                    <p>{{item.NEC_NAME}}</p>
+                                                </div>
+                                                <div formControlName="PATIENT_ID"></div>
+                                                <h4 class="mt-0">Ethan Fuller</h4>
+                                                <h6 class="mt-0">Information</h6>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box3">
+                                <div class="head-title">
+                                    <h3 align="center" (click)="book()">Book appointment</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" [formGroup]="bedSidesubForm">
+                        <div class="box5"><b> SERVICES</b><br> <br>
+
+                            <div class="form-group">
+
+                                <select class="form-control input-bg" formControlName="SERVICE_ID">
+                                    <option value="" disabled>service types</option>
+                                    <option *ngFor="let x of SERVICE_ID" [value]="x.BSA_ID"
+                                        style="color: darkblue;">
+                                        {{x.BSA_SERVICE_NAME}}</option>
+
+                                </select>
+                            </div>
+
+                            <br><br>
+                            <p>Shuttering is one of the most common speech disorders, with upto 10% of all kids
+                                struggling
+                                with it.
+                                As a result, most SLPs have a tremondous amount of experience in helping kids with
+                                this
+                                condition</p>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <div class="box" type="datetime" [formGroup]="bedSidesubForm">
+                                <p>FREQUENCY</p>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">BOOKING_DATE
+                                            <input type="datetime-local" class="form-control input-bg"
+                                                formControlName="BOOKING_DATE">
+                                            <br>
+
+                                        </div><br>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <select class="form-select">
+                                            <option selected>Day of the week/month</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <select class="form-select">
+                                            <option selected>Time</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <div class="box">
+                                <p>ADDRESS</p>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="date-custom">
+                                            <input type="type" class="form-control"
+                                                placeholder="Same as in the Health card" name=""
+                                                data-provide="datepicker">
+                                            <div class="input-custom-addon"><span><input type="checkbox"></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="type" class="form-control" placeholder="H.NO./Building Name"
+                                            name="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="type" class="form-control" placeholder="Floor" name="">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="type" class="form-control" placeholder="Locality" name="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="type" class="form-control" placeholder="City" name="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

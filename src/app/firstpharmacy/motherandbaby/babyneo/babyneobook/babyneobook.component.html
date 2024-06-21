@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Welcome to First Pharmacy</title>
+</head>
+
+<body>
+    <div class="container-fluid custom-container">
+
+        <div class="row">
+            <div class="col-md-1">
+                <div class="left-menu">
+                    <div class="menu-top">
+                        <ul>
+                            <li><a href="#" class="active"><span class="fa fa-cog fa-2x"></span> Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-bottom">
+                        <ul>
+                            <li><a href="#"><span class="fa fa-user fa-2x"></span> User Details</a></li>
+                            <li><a href="#"><span class="fa fa-sign-out fa-2x"></span> Sign-out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-11 right-content">
+
+                <div class="row">
+
+                    <div class="col-md-2">
+                        <div class="logo">
+                            <img src="assets/img/logo.png">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6"></div>
+
+                    <div class="col-md-4">
+                        <div class="search-bar">
+                            <div class="form-group has-search">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control" placeholder="SEARCH">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box">
+                            <div class="head-title">
+                                <div class="media-left">
+                                    <img src="assets/img/mother.png" class="mr-3" alt="...">
+                                </div>
+                                <h3>Mother & Baby Care</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="row box">
+                            <div class="col-md-7 ps-0">
+                                <div class="head-title">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="assets/img/11.png" class="mr-3" alt="...">
+                                        </div>
+                                        <div class="media-body2">
+                                            <h4 class="mb-0">Ethan Fuller</h4>
+                                            <h6 class="mb-0"><small>Information</small></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 px-0">
+                                <div class="mid-btn-grp1">
+                                    <div class="head-title" [formGroup]="babyNeobookForm">
+
+                                        
+                                        <div class="form-group">
+                                            <div align="right" *ngFor="let item of baneo" value="item.MAB_B_ID" style="color: darkblue;" name="MAB_B_ID" id="MAB_B_ID" formControlName="MAB_SERVICE_ID">
+                                                <p>{{item.MAB_B_SERVICE_TYPE}}</p>
+                                            
+                                            </div>
+                                            <div  formControlName="PATIENT_ID"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="head-title-btn">
+                            <input type="button" value="Book Appointment" name="" class="btn btn-default"
+                                (click)="bookNeo()">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="box">
+                            <div class="media">
+                                <div class="media-left ">
+                                    <img src="assets/img/64.png" class="mr-3" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="mt-0">Ethan Fuller</h4>
+                                    <h6 class="mt-0">Information</h6><br>
+                                    <p>Will you do the same for me? It's time to face the music I'm no longer your muse.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-0">Parameter</p>
+                                    <h6>Information</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-0">Parameter</p>
+                                    <h6>Detail</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-0">Parameter</p>
+                                    <h6>Detail</h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-0">Parameter</p>
+                                    <h6>Information</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="box" [formGroup]="babyNeobookForm">
+                            <p>SCHEDULE APPOINTMENT</p>
+                            <div class="row">
+                                <div class="col-md-12" [formGroup]="babyNeobookForm">
+                                    <div class="date-custom">
+                                        <input type="date" class="form-control" placeholder="Date" name="" formControlName="DATE">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="col-md-12" [formGroup]="babyNeobookForm">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-bg" formControlName="LOCATION" placeholder="LOCATION">
+                                    <br>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-12" [formGroup]="babyNeobookForm">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-bg" formControlName="PRICE" placeholder="PRICE">
+                                    <br>
+                                </div><br>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="box">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        CONSULTATION FEES
+                                    </div>
+                                    <div class="col-md-3">
+                                        <span class="fa fa-usd"></span>99
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+    </div>
+</body>
+
+</html>

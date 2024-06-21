@@ -6,10 +6,14 @@ describe('ThirdpageComponent', () => {
   let component: ThirdpageComponent;
   let fixture: ComponentFixture<ThirdpageComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ ThirdpageComponent ]
+    })
+    .compileComponents();
+  });
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [ThirdpageComponent]
-    });
     fixture = TestBed.createComponent(ThirdpageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Welcome to First Pharmacy</title>
+</head>
+
+<body>
+    <div style="display: flex;">
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="container-fluid custom-container">
+
+            <div class="row">
+                <div class="col-md-11 right-content">
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="logo">
+                                <img src="assets/img/logo.png">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6"></div>
+
+                        <div class="col-md-4">
+                            <div class="search-bar">
+                                <div class="form-group has-search">
+                                    <span class="fa fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control" placeholder="SEARCH">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="head-title">
+                                    <div class="media-left ">
+                                        <img src="assets/img/nurse.png" class="mr-3" alt="...">
+                                    </div>
+                                    <h3>Nurse</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="row box">
+                                <div class="col-md-7 ps-0">
+                                    <div class="head-title">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="assets/img/11.png" class="mr-3" alt="...">
+                                            </div>
+                                            <div class="media-body2">
+                                                <h4 class="mb-0">Ethan Fuller</h4>
+                                                <h6 class="mb-0"><small>Information</small></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 px-0">
+                                    <div class="mid-btn-grp1">
+                                        <div class="head-title" [formGroup]="nuroneForm">
+                                            <div class="form-group">
+                                                <div align="centre" *ngFor="let item of necDetails" value="item.NEC_ID"
+                                                    style="color: darkblue;" name="NEC_ID" id="NEC_ID"
+                                                    formControlName="NEC_ID">
+                                                    <p>{{item.NEC_NAME}}</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="head-title-btn">
+                                <input type="button" value="Book Appointment" name="" class="btn btn-default"
+                                    (click)="bookNu()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box d-grid" [formGroup]="nuroneForm">
+                                <p>SERVICES</p>
+                                <div class="form-group">
+                                    <select class="form-control input-bg" formControlName="NUR_SERVICE_ID"
+                                        (change)="onChangeService($any($event.target).value)">
+                                        <option value="" disabled>Therapy Names</option>
+                                        <option *ngFor="let x of NUR_ID" [value]="x.NUR_SERVICE_ID">
+                                            {{x.NUR_SERVICE_NAME}}
+                                        </option>
+                                    </select>
+                                    <div formControlName="PATIENT_ID"></div>
+                                </div>
+
+
+
+                                <!-- <div class="form-group">
+
+                                <select class="form-control input-bg" formControlName="NUR_SERVICE_ID"  (change)="onChangeService($event.target)">
+                                    <option value="" disabled>Service Type
+                                    <option *ngFor="let x of NUR_ID" [value]="x.NUR_SERVICE_ID" style="color: darkblue;" placeholder="service types"> {{x.NUR_SERVICE_NAME}}</option>
+
+                                </select>
+                            </div> -->
+                                <p>
+                                    Shuttering is one of the most common speech disorders, with upto 10% of all kids
+                                    struggling with it. As a result, most SLPs have a tremondous amount of experience in
+                                    helping kids with this condition
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4" [formGroup]="nuroneForm">
+                            <div class="box d-grid">
+                                <p>Nurse</p>
+                                <div class="form-group">
+
+                                    <select class="form-control input-bg" formControlName="NUR_RECOMMEND_ID">
+                                        <option value="" disabled>Nurse Recommend
+                                        <option *ngFor="let x of Nurse" [value]="x.NUR_RECOMMEND_ID"
+                                            aria-placeholder="Nurse Recommend">
+                                            {{x.NUR_RECOMMENDATION_TYPE}}</option>
+
+                                    </select>
+                                </div>
+                                <p>
+                                    Shuttering is one of the most common speech disorders, with upto 10% of all kids
+                                    struggling with it. As a result, most SLPs have a tremondous amount of experience in
+                                    helping kids with this condition
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box">
+                                <p>SCHEDULE APPOINTMENT</p>
+                                <div class="row" [formGroup]="nuroneForm">
+                                    <div class="col-md-6">
+                                        <div class="date-custom" class="form-group">
+                                            <input type="date" class="form-control" placeholder="From" name=""
+                                                data-provide="datepicker" formControlName="">
+                                            <div class="input-custom-addon"><span class="fa fa-calendar"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" class="form-group">
+                                        <div class="date-custom">
+                                            <input type="time" class="form-control" placeholder="To" name=""
+                                                data-provide="datepicker" formControlName="">
+                                            <div class="input-custom-addon"><span class="fa fa-calendar"></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box" [formGroup]="nuroneForm">
+                                <p>ADDRESS</p>
+                                <div class="row" class="form-group">
+                                    <div class="col-md-12">
+                                        <div class="date-custom">
+                                            <input type="type" class="form-control"
+                                                placeholder="Same as in the Health card" name=""
+                                                data-provide="datepicker">
+                                            <div class="input-custom-addon"><span><input type="checkbox"></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row" class="form-group">
+                                    <div class="col-md-6">
+                                        <input type="type" class="form-control" placeholder="H.NO./Building Name"
+                                            name="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="type" class="form-control" placeholder="Floor" name="">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row" class="form-group">
+                                    <div class="col-md-6">
+                                        <input type="type" class="form-control" placeholder="Locality" name="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="type" class="form-control" placeholder="City" name="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

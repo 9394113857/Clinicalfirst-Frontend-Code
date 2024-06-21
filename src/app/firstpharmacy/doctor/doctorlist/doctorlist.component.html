@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Welcome to First Pharmacy</title>
+</head>
+
+<body>
+  <div style="display: flex;">
+    <div class="col-lg-1 col-md-1 col-sm-1">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="container-fluid custom-container">
+
+      <div class="row">
+        <div class="col-md-11 right-content">
+
+          <div class="row">
+
+            <div class="col-md-2">
+              <div class="logo">
+                <img src="assets/img/logo.png">
+              </div>
+            </div>
+
+            <div class="col-md-6"></div>
+
+            <div class="col-md-4">
+              <div class="search-bar">
+                <div class="form-group has-search">
+                  <span class="fa fa-search form-control-feedback"></span>
+                  <input type="text" class="form-control" placeholder="SEARCH">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="box">
+                <div class="head-title">
+                  <span class="fa fa-ambulance"></span>
+                  <h3>Doctor Cunsoltation</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="row box">
+                <div class="col-md-7 ps-0">
+                  <div class="head-title">
+                    <div class="media">
+                      <div class="media-left">
+                        <img src="assets/img/11.png" class="mr-3" alt="...">
+                      </div>
+                      <div class="media-body2">
+                        <h4 class="mb-0">Ethan Fuller</h4>
+                        <h6 class="mb-0"><small>Information</small></h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5 px-0">
+                  <div class="mid-btn-grp1" *ngFor="let item of admin">
+                    <span>
+                      <input type="button" name="" class="btn btn-default">{{item.SPECIALIZATION_NAME}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4" *ngFor="let item of admin">
+              <div class="head-title-btn">
+                <input type="button" value="Proceed" name="" class="btn btn-default" >
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <p class="row-title">CAUSE</p>
+
+            <div class="col-md-4" *ngFor="let item of docList" >
+              <div class="box" (click)="proceedDoc(item.Doctor_ID)">
+                <div class="media">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img src="assets/img/DrRamanaRao.jpg" class="mr-3" alt="..." style="height: 65px;">
+                    </div>
+                    <div class="col-md-7">
+                      <h4 class="mt-0 mb-0 pt-2">{{item.Doctor_Name}}</h4>
+                      <h6 class="mt-0 mb-0"><small>{{item.Doctor_Specialization}}</small></h6>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="title-credits">
+                        <i class="fa fa-inr fa-2x">5000</i><span></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="pt-3 pb-1">Will you do the same for me? It's time to face the music I'm no longer your muse.
+                  </p>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="text-muted mb-0">Parameter</p>
+                    <h6>Information</h6>
+                  </div>
+                  <div class="col-md-4">
+                    <p class="text-muted mb-0">Parameter</p>
+                    <h6>Detail</h6>
+                  </div>
+                  <div class="col-md-4">
+                    <p class="text-muted mb-0">Parameter</p>
+                    <h6>Detail</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-md-4">
+            <div class="box">
+              <div class="media">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img src="assets/img/64.png" class="mr-3" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                      <h4 class="mt-0 mb-0 pt-2">{{item.Doctor_Name}}</h4>
+                      <h6 class="mt-0 mb-0"><small>{{item.Doctor_Specialization}}</small></h6>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="title-credits">
+                      <i class="fa fa-usd fa-2x"></i><span>99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <p class="pt-3 pb-1">Will you do the same for me? It's time to face the music I'm no longer your muse.</p>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Information</h6>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Detail</h6>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Detail</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="box">
+              <div class="media">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img src="assets/img/64.png" class="mr-3" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                      <h4 class="mt-0 mb-0 pt-2">{{item.Doctor_Name}}</h4>
+                      <h6 class="mt-0 mb-0"><small>{{item.Doctor_Specialization}}</small></h6>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="title-credits">
+                      <i class="fa fa-usd fa-2x"></i><span>99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <p class="pt-3 pb-1">Will you do the same for me? It's time to face the music I'm no longer your muse.</p>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Information</h6>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Detail</h6>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Detail</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <div class="row">     
+       <div class="col-md-4">
+            <div class="box">
+              <div class="media">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img src="assets/img/64.png" class="mr-3" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                      <h4 class="mt-0 mb-0 pt-2">{{item.Doctor_Name}}</h4>
+                      <h6 class="mt-0 mb-0"><small>{{item.Doctor_Specialization}}</small></h6>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="title-credits">
+                      <i class="fa fa-usd fa-2x"></i><span>99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <p class="pt-3 pb-1">Will you do the same for me? It's time to face the music I'm no longer your muse.</p>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Information</h6>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Detail</h6>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Detail</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="box">
+              <div class="media">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img src="assets/img/64.png" class="mr-3" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                      <h4 class="mt-0 mb-0 pt-2">{{item.Doctor_Name}}</h4>
+                      <h6 class="mt-0 mb-0"><small>{{item.Doctor_Specialization}}</small></h6>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="title-credits">
+                      <i class="fa fa-usd fa-2x"></i><span>99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <p class="pt-3 pb-1">Will you do the same for me? It's time to face the music I'm no longer your muse.</p>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Information</h6>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Detail</h6>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Detail</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="box">
+              <div class="media">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img src="assets/img/64.png" class="mr-3" alt="...">
+                  </div>
+                  <div class="col-md-7">
+                      <h4 class="mt-0 mb-0 pt-2">{{item.Doctor_Name}}</h4>
+                      <h6 class="mt-0 mb-0"><small>{{item.Doctor_Specialization}}</small></h6>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="title-credits">
+                      <i class="fa fa-usd fa-2x"></i><span>99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <p class="pt-3 pb-1">Will you do the same for me? It's time to face the music I'm no longer your muse.</p>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Information</h6>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Detail</h6>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-muted mb-0">Parameter</p>
+                  <h6>Detail</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <p class="row-title">OTHER SPECIALIZATIONS</p>
+          <div class="col-md-2 touch" *ngFor="let item of docList">
+            <nav class="cause-list">
+              <ul class="nav justified text-center">
+                <li class="row">
+                  <a class="nav-link" >{{item.Doctor_Name}}</a>
+                  <a class="nav-link" >{{item.Doctor_Specialization}}</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>--->
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </div>
+</body>
+
+</html>

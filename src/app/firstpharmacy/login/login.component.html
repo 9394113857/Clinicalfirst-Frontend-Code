@@ -1,1 +1,206 @@
-<p>login works!</p>
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100 p-t-30 p-b-50">
+			<span class="login100-form-title p-b-41">Admin Login</span>
+			<form class="login100-form validate-form p-b-33 p-t-30">
+
+
+				
+				<div  [formGroup]="userDetailForm">
+					<div  >
+						<div class="form-group" class="wrap-input100 validate-input" >
+							<input class="input100" type="text" name="username" placeholder="User name" formControlName="email">
+							<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="wrap-input100 validate-input" >
+							<input class="input100" type="password" name="pass" placeholder="Password" formControlName="password">
+							<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+						</div>
+					</div>
+				</div>
+				<div class="container-login100-form-btn m-t-32">
+					<button class="login100-form-btn" (click)="login()">
+						Login
+					</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+</html>
+
+
+
+<div>
+    <form>
+        <div class="man">
+            <h1 class="head">LOGIN</h1>
+            <div class="box">
+                <div [formGroup]="userDetailForm">
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" formControlName="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" formControlName="password">
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <button id="pos" type="submit" (click)="login()">LOGIN</button>
+            </div>
+
+        </div>
+
+    </form>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+<body>
+	<header>
+		<h1> ClinicalFirst Login Portal</h1>
+	</header>
+	<main [formGroup]="userDetailForm">
+		<div [formGroup]="userDetailForm">
+			<div id="login_form" class="form_class" action="" method="post">
+				<div class="form-group">
+						<label>
+							<h4>Login:</h4>
+						</label>
+						<div class="form-group" class="box">
+							<span
+							*ngIf="userDetailForm.controls['email'].hasError('required')
+							&& userDetailForm.controls['email'].touched"
+							class="err-msg c-red">
+							Field Required
+						</span>
+							<input type="email" placeholder="Email" formControlName="email" style="height: 40px;"
+							[ngStyle]="{'border-color':
+							(userDetailForm.controls['email'].hasError('required')
+							&& userDetailForm.controls['email'].touched) ||
+							(userDetailForm.controls['email'].hasError('pattern')
+							&& userDetailForm.controls['email'].touched) ?
+							'red'
+							: 'grey'}">
+							<!-- <span class="text-danger" *ngIf="userDetailForm.controls['email'].dirty && userDetailForm.hasError('Required','email')">*Email is Required</span> -->
+						</div>
+					<label> 	 	
+						<h4>Password:</h4>
+					</label>
+					<div class="form-group" class="box">
+						<!-- <input type="password" placeholder="Password" formControlName="password" style="height: 40px;">
+						<span class="text-danger" *ngIf="userDetailForm.controls['password'].dirty && userDetailForm.hasError('Required','password')">*password is Required</span> -->
+						<span
+						*ngIf="userDetailForm.controls['password'].hasError('required')
+						&& userDetailForm.controls['password'].touched"
+						class="err-msg c-red">
+						Field Required
+					</span>
+					<input type="password" class="input" id="pswrd"
+						placeholder="Enter your Password"
+						formControlName="password"
+						[ngStyle]="{'border-color':
+						(userDetailForm.controls['password'].hasError('required')
+						&& userDetailForm.controls['password'].touched) ||
+						(userDetailForm.controls['password'].hasError('minlength')
+						&& userDetailForm.controls['password'].touched) ?
+						'red' : 'grey'}"
+						>
+					</div>
+					<div (click)="sign()">Signup</div>
+					<button class="submit_class" id="submit" [disabled]="!userDetailForm.valid" type="submit" (click)="login()">Enter</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- <footer>
+        <p>Desenvolvido por <a href="#">JM_Code&trade;</a></p>
+    </footer> -->
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Sign in/up Form</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>

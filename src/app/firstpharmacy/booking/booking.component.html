@@ -1,1 +1,260 @@
-<p>booking works!</p>
+<!-- <head>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+</head> -->
+
+<body>
+    <div style="display: flex;">
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <app-sidebar></app-sidebar>
+        </div>
+
+        <div class="container row">
+            <div class="column">
+                <h1><b>1.Mother & Babycare Bookings</b></h1>
+                <table class="table table-bordered tab1 " style="width: 110%;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">PATIENT_ID</th>
+                            <th scope="col">MAB_SERVICE_ID</th>
+                            <th scope="col">LOCATION</th>
+                            <th scope="col">PRICE</th>
+                            <th scope="col"> DATE</th>
+                        </tr>
+
+                    <tbody>
+                        <tr *ngFor="let item of crudData">
+                            <td scope="row">{{item.ID}}</td>
+                            <td>{{item.PATIENT_ID}}</td>
+                            <td>{{item.MAB_SERVICE_ID}}</td>
+                            <td>{{item.LOCATION}}</td>
+                            <td>{{item.PRICE}}</td>
+                            <td>{{item.DATE}}</td>
+                        </tr>
+
+                    </tbody>
+                    <!-- <tbody *ngIf="crudData.length==0">
+                    <h1 style="color: red;">no record are found</h1>
+                </tbody> -->
+
+                </table>
+            </div>
+
+
+            <div class="container column">
+                <h1><b>2.Doctor Bookings</b></h1>
+                <table class="table table-bordered tab1" style="width: 110%;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"> ID</th>
+                            <th scope="col">SPECILIZATION_ID</th>
+                            <th scope="col">PATIENT_ID</th>
+                            <th scope="col">DATE</th>
+                            <th scope="col">TIME</th>
+                            <th scope="col">CONSULTATION_FEE</th>
+                        </tr>
+
+                    <tbody>
+                        <tr *ngFor="let item of crudData1">
+                            <th scope="row">{{item.ID}}</th>
+                            <td>{{item.SPECILIZATION_ID}}</td>
+                            <td>{{item.PATIENT_ID}}</td>
+                            <td>{{item.DATE}}</td>
+                            <td>{{item.TIME}}</td>
+                            <td>{{item.CONSULTATION_FEE}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="container column">
+                <h1><b>3.PWC Bookings</b></h1>
+                <table class="table table-bordered tab1" style="width: 110%;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">PATIENT_ID</th>
+                            <th scope="col">LOCATION</th>
+                            <th scope="col">PRICE</th>
+                            <th scope="col">DATE</th>
+                            <th scope="col">PWC_P_T_ID</th>
+                            <th scope="col">SPECIALIZATION_ID</th>
+                        </tr>
+
+                    <tbody>
+                        <tr *ngFor="let item of crudData2">
+                            <th scope="row">{{item.ID}}</th>
+                            <td>{{item.PATIENT_ID}}</td>
+                            <td>{{item.LOCATION}}</td>
+                            <td>{{item.PRICE}}</td>
+                            <td>{{item.DATE}}</td>
+                            <td>{{item.PWC_P_T_ID}}</td>
+                            <td>{{item.SPECIALIZATION_ID}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <div class="container column">
+                <h1><b>4.Bedside Assistant Bookings</b></h1>
+                <table class="table table-bordered tab1" style="width: 110%;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">PATIENT_ID</th>
+                            <th scope="col">NEC_ID</th>
+                            <th scope="col">SERVICE_ID</th>
+                            <th scope="col">BOOKING_DATE</th>
+                        </tr>
+
+                    <tbody>
+                        <tr *ngFor="let item of crudData3">
+                            <th scope="row">{{item.ID}}</th>
+                            <td>{{item.PATIENT_ID}}</td>
+                            <td>{{item.NEC_ID}}</td>
+                            <td>{{item.SERVICE_ID}}</td>
+                            <td>{{item.BOOKING_DATE}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container column">
+                <h1><b>5.BP Bookings</b></h1>
+                <table class="table table-bordered tab1" style="width: 110%;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">PATIENT_ID</th>
+                            <th scope="col">NECESSITY_ID</th>
+                            <th scope="col">BP_ID</th>
+                            <th scope="col">BOOKING_DATE</th>
+                        </tr>
+
+                    <tbody>
+                        <tr *ngFor="let item of crudData4">
+                            <th scope="row">{{item.ID}}</th>
+                            <td>{{item.PATIENT_ID}}</td>
+                            <td>{{item.NECESSITY_ID}}</td>
+                            <td>{{item.BP_ID}}</td>
+                            <td>{{item.BOOKING_DATE}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container column">
+                <h1><b>6.Ambulance Bookings</b></h1>
+                <table class="table table-bordered tab1" style="width: 110%;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">PATIENT_ID</th>
+                            <th scope="col">SITUATION_ID</th>
+                            <th scope="col">AMB_TYPE_ID</th>
+                            <th scope="col">BASIC_OR_ADVANCE</th>
+                            <th scope="col">CAUSE_ID</th>
+                            <th scope="col">PRICE</th>
+                        </tr>
+
+                    <tbody>
+                        <tr *ngFor="let item of crudData5">
+                            <th scope="row">{{item.ID}}</th>
+                            <td>{{item.PATIENT_ID}}</td>
+                            <td>{{item.SITUATION_ID}}</td>
+                            <td>{{item.AMB_TYPE_ID}}</td>
+                            <td>{{item.BASIC_OR_ADVANCE}}</td>
+                            <td>{{item.CAUSE_ID}}</td>
+                            <td>{{item.PRICE}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="container column">
+                <h1><b>7.Nurse Bookings</b></h1>
+                <table class="table table-bordered tab1" style="width: 110%;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">PATIENT_ID</th>
+                            <th scope="col">NEC_ID</th>
+                            <th scope="col">NUR_SERVICE_ID</th>
+                            <th scope="col">NUR_RECOMMEND_ID</th>
+                        </tr>
+
+                    <tbody>
+                        <tr *ngFor="let item of crudData6">
+                            <td>{{item.PATIENT_ID}}</td>
+                            <td>{{item.NEC_ID}}</td>
+                            <td>{{item.NUR_SERVICE_ID}}</td>
+                            <td>{{item.NUR_RECOMMEND_ID}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container column">
+                <h1><b>8.Rehabilitation Booking</b></h1>
+                <table class="table table-bordered tab1" style="width: 110%;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">PATIENT_ID</th>
+                            <th scope="col">THERAPY_ID</th>
+                            <th scope="col">TYPE_ID</th>
+                        </tr>
+
+                    <tbody>
+                        <tr *ngFor="let item of crudData7">
+                            <td>{{item.PATIENT_ID}}</td>
+                            <td>{{item.THERAPY_ID}}</td>
+                            <td>{{item.TYPE_ID}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container column">
+                <h1><b>9.Physiotherapy Booking</b></h1>
+                <table class="table table-bordered tab1" style="width: 110%;">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">PATIENT_ID</th>
+                            <th scope="col">SERVICE_ID</th>
+                            <th scope="col">CONDITION_ID</th>
+                            <th scope="col">LOCATION</th>
+                            <th scope="col">PRICE</th>
+                            <th scope="col">DATE_AND_TIME</th>
+                            <th scope="col">USER_NAME</th>
+                        </tr>
+
+                    <tbody>
+                        <tr *ngFor="let item of crudData8">
+                            <td>{{item.ID}}</td>
+                            <td>{{item.PATIENT_ID}}</td>
+                            <td>{{item.SERVICE_ID}}</td>
+                            <td>{{item.CONDITION_ID}}</td>
+                            <td>{{item.LOCATION}}</td>
+                            <td>{{item.PRICE}}</td>
+                            <td>{{item.DATE_AND_TIME}}</td>
+                            <td>{{item.USER_NAME}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>

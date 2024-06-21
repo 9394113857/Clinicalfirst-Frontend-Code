@@ -1,0 +1,15 @@
+/* .groupmat{
+    width: 10px;
+} */
+.btn-outline-primary{
+    width: 220px;
+    background: #5755d5!important; /*2cc8df*/
+    border: none;
+  }
+  .card{
+      width: 250px;
+      height: 80px;
+  }
+  /* .bookcolor{
+    color: #33cfc8;
+  } */

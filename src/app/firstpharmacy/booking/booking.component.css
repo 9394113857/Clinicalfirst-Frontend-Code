@@ -1,0 +1,31 @@
+.container{
+
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    font-size: 15px;
+}
+
+ul {
+    list-style-type: disc !important;
+    padding-left: 1em;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  /* .example1{
+    float: left;
+    margin-right: 300px;
+    margin-top: 250px;
+  } */

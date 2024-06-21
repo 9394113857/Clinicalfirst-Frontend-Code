@@ -1,1 +1,165 @@
-<p>physiotherapy works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Welcome to First Pharmacy</title>
+
+</head>
+
+<body>
+    <div style="display: flex;">
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="container-fluid custom-container">
+            <div class="row">
+                <div class="col-md-11 right-content">
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="logo">
+                                <img src="assets/img/logo.png">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6"></div>
+
+                        <div class="col-md-4">
+                            <div class="search-bar">
+                                <div class="form-group has-search">
+                                    <span class="fa fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control" placeholder="SEARCH">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="box">
+                                <div class="head-title">
+                                    <div class="media-left ">
+                                        <img src="assets/img/physiotheraphy.png" class="mr-3" alt="...">
+                                    </div>
+                                    <h3>Physiotheraphy</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-md-4">
+                            <div class="box2">
+                                <div class="head-title">
+                                    <h3 align="center" (click)="book()">Book appointment</h3>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+                        <div class="btn  btn-sm mr-10 mt-autp ">
+                            <button mat-raised-button color="primary" type="button" class="btn btn-outline-primary"
+                                class="btn btn-default" (click)="book()">BOOK
+                                APPOINTMENT</button>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <div class="box">
+                                <div class="media">
+                                    <div class="media-left ">
+                                        <img src="assets/img/64.png" class="mr-3" alt="...">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="mt-0">Ethan Fuller</h4>
+                                        <h6 class="mt-0">Information</h6><br>
+                                        <p>Will you do the same for me? It's time to face the music I'm no longer your
+                                            muse.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="text-muted mb-0">Parameter</p>
+                                        <h6>Information</h6>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="text-muted mb-0">Parameter</p>
+                                        <h6>Detail</h6>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="text-muted mb-0">Parameter</p>
+                                        <h6>Detail</h6>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="text-muted mb-0">Parameter</p>
+                                        <h6>Information</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" [formGroup]="oppDetailForm">
+                            <div class="box">
+
+                                <p><b>TYPES OF SERVICE</b></p>
+
+
+
+                                <div class="form-group">
+                                    <select class="form-control input-bg" formControlName="service_speciality"
+                                        (change)="onChangeTherapy($any($event.target).value)">
+
+                                        <option value="" disabled>Services</option>
+                                        <option *ngFor="let x of physio" [value]="x.SERVICE_SPECIALITY">
+                                            {{x.SERVICE_SPECIALITY}}
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <p>Shuttering is one of the most common speech disorders, with upto 10% of all kids
+                                    struggling with it.
+                                    As a result, most SLPs have a tremondous amount of experience in helping kids with
+                                    this condition</p>
+
+                                <br><br>
+
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <div class="col-md-4" [formGroup]="oppDetailForm">
+                            <div class="box">
+
+                                <p><b>CAUSE</b></p>
+
+
+                                <div class="form-group">
+                                    <select class="form-control input-bg" formControlName="condition_name">
+
+                                        <option value="" disabled>causes</option>
+                                        <option *ngFor="let x of pres" [value]="x.CONDITION_NAME">{{x.CONDITION_NAME}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

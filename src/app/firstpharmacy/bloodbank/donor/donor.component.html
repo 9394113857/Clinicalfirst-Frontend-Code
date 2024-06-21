@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Welcome to First Pharmacy</title>
+
+</head>
+
+<body>
+    <div style="display: flex;">
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="container-fluid custom-container">
+
+            <div class="row">
+                <div class="col-md-11 right-content">
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="logo">
+                                <img src="assets/img/logo.png">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6"></div>
+
+                        <div class="col-md-4">
+                            <div class="search-bar">
+                                <div class="form-group has-search">
+                                    <span class="fa fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control" placeholder="SEARCH">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="head-title">
+                                    <div class="media-left ">
+                                        <img src="assets/img/Rehabilitation.png" class="mr-3" alt="...">
+                                    </div>
+                                    <h3>Blood Bank</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="assets/img/11.png" class="mr-3" alt="...">
+                                    </div>
+                                    <div>
+                                        <div class="head-title">
+                                            <h5 align="right">DONOR</h5>
+                                            <h4 class="mt-0">Ethan Fuller</h4>
+                                            <h6 class="mt-0">Information</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-md-4">
+                            <div class="box3">
+                                <div class="head-title">
+                                    <h3 align="center" (click)="book()">Register Request</h3>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="col-md-4">
+                            <div class="btn  btn-sm mr-10 mt-auto float-end">
+                                <button mat-raised-button color="primary" type="button" class="btn btn-outline-primary"
+                                    class="btn btn-default" (click)="book()">Register Request</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="box" [formGroup]="oppDetailForm">
+                            <b> CHECK AVAILABILITY</b><br> <br>
+                            <p>BLOOD_GROUP</p>
+                            <div class="form-group">
+                                <select class="form-control input-bg" formControlName="BLOOD_GROUP">
+                                    <option value="" disabled>blood-group names</option>
+                                    <option *ngFor="let x of Bludgrp" [value]="x.BLOOD_GROUP">{{x.BLOOD_GROUP}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

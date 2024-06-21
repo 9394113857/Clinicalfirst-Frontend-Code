@@ -1,0 +1,45 @@
+.input-group1 {
+    /* position: relative; */
+    display: flex;
+  }
+  
+  .div7 {
+    color: white;
+    width: 312px;
+    height: 30px;
+    position: fixed;
+    margin-left: 66px;
+    background: #0000004f;
+    border: 1px solid white;
+    border-radius: 0px 20px 20px 0px;
+    border-left-color: transparent;
+    font-size: 22px;
+    padding-left: 13px;
+    border-left: none;
+  }
+  .div8 {
+    color: white;
+    width: 78px;
+    height: 30px;
+    position: fixed;
+    background: #0000004f;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 22px;
+  }
+  .div7,
+  .div8:focus-visible {
+    outline: none !important;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: gray;
+  }
+  

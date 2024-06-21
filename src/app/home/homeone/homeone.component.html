@@ -1,1 +1,266 @@
-<p>homeone works!</p>
+<body>
+
+
+    <div id="topbar" class="d-flex align-items-center fixed-top">
+        <div class="container d-flex justify-content-between">
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+                <i class="bi bi-phone"></i> +1 5589 55488 55
+            </div>
+            <div class="d-none d-lg-flex social-links align-items-center">
+                <a class="twitter"><i class="bi bi-twitter"></i></a>
+                <a class="facebook"><i class="bi bi-facebook"></i></a>
+                <a class="instagram"><i class="bi bi-instagram"></i></a>
+                <a class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <header id="header" class="fixed-top">
+        <a class="navbar-brand"></a>
+        <div class="container d-flex align-items-center">
+            <h1 class="logo me-auto"><a>FIRST PHARMACY</a></h1>
+            <i class="fa-solid fa-align-justify"></i>
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto " (click)="myElement1.scrollIntoView({ behavior:
+                        'smooth', block: 'start' })">Home</a></li>
+                    <li><a class="nav-link scrollto">About</a></li>
+                    <li><a class="nav-link scrollto" (click)="myElement.scrollIntoView({ behavior:
+                        'smooth', block: 'start' })">Services</a></li>
+
+                    <li><a class="nav-link scrollto">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+
+            <a class="appointment-btn scrollto" [routerLink]="['/login']" [routerLinkActive]="['is-active']"><span
+                    class="d-none d-md-inline">Make An</span>
+                Appointment</a>
+        </div>
+    </header>
+
+
+    <section #myElement1 id="hero" class="d-flex align-items-center">
+        <div class="container">
+            <h1 style="color:#999900;">&nbsp;&nbsp;&nbsp; Welcome to </h1><br>
+            <h1 style="color: #999900;">First Pharmacy</h1>
+            <h2>We provide all kinds of clinical Services</h2>
+            <a class="btn-get-started scrollto">Get Started</a>
+        </div>
+    </section>
+</body><br><br><br><br>
+
+
+
+
+
+
+
+<div #myElement>
+    <div>
+        <div class="col-md-11 right-content" style="cursor: pointer; margin-left: 45px;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="head-title">
+                            <div class="media-left ">
+                                <img src="assets/img/rehabilitation.png" class="mr-3" alt="...">
+                            </div>
+                            <h3>Beside Attendant</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="head-title">
+                            <div class="media-left ">
+                                <img src="assets/img/blood-bank.png" class="mr-3" alt="...">
+                            </div>
+                            <h3>BP Monitoring</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="head-title">
+                            <div class="media-left ">
+                                <img src="assets/img/rehabilitation.png" class="mr-3" alt="...">
+                            </div>
+                            <h3>Doctor Consultation</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="head-title">
+                            <div class="media-left">
+                                <img src="assets/img/mother.png" class="mr-3" alt="...">
+                            </div>
+                            <h3>Mother & Baby Care</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="head-title">
+                            <div class="media-left ">
+                                <img src="assets/img/nurse.png" class="mr-3" alt="...">
+                            </div>
+                            <h3>Nurse</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="head-title">
+                            <div class="media-left">
+                                <img src="assets/img/pregnancy.png" class="mr-3" alt="...">
+                            </div>
+                            <h3>Pregnancy Care</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="head-title">
+                            <div class="media-left ">
+                                <img src="assets/img/rehabilitation.png" class="mr-3" alt="...">
+                            </div>
+                            <h3>Rehabilitation</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="head-title">
+                            <div class="media-left ">
+                                <img src="assets/img/blood-bank.png" class="mr-3" alt="...">
+                            </div>
+                            <h3>Blood Bank</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="head-title">
+                            <div class="media-left ">
+                                <img src="assets/img/physiotheraphy.png" class="mr-3" alt="...">
+                            </div>
+                            <h3>Physiotheraphy</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="box">
+                        <div class="head-title">
+                            <div class="media-left ">
+                                <img src="assets/img/car-accident.png" class="mr-3" alt="..." style="height: 60px;">
+                            </div>
+                            <h3>Ambulance</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book.
+                                It has survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing
+                                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

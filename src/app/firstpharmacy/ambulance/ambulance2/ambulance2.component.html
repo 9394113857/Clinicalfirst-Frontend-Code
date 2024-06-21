@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Welcome to First Pharmacy</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div  style="display: flex;" [formGroup]="AmbForm">
+    <div class="col-lg-1 col-md-1 col-sm-1">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="container-fluid custom-container">
+      <div class="row">
+        <div class="col-md-11 right-content">
+
+          <div class="row">
+            <div class="col-md-2">
+              <div class="logo">
+                <img src="assets/img/logo.png">
+              </div>
+            </div>
+
+            <div class="col-md-6"></div>
+
+            <div class="col-md-4">
+              <div class="search-bar">
+                <div class="form-group has-search">
+                  <span class="fa fa-search form-control-feedback"></span>
+                  <input type="text" class="form-control" placeholder="SEARCH">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <div>
+                <button mat-fab color="primary" aria-label="Example icon button with a Ambulance icon">
+                  <mat-icon> local_shipping</mat-icon>
+                </button>&nbsp;&nbsp;<b>AMBULANCE</b>
+              </div>&nbsp;&nbsp;
+
+              <div class="btn-group mr-2 " role="group" aria-label="Second group">
+                <div class="col-md-4 mt-auto">
+                  <div class="btn  btn-sm mr-10">
+                    <div >
+                      <span *ngFor="let x of typeDetails2" class="form-group">
+                        <button mat-raised-button color="warn" type="button" value={{x.SITUATION_ID}}
+                          formControlName="situation_type" ngDefaultControl
+                          class="btn btn-default">{{x.SITUATION_TYPE}}</button>
+                      </span>
+                      -
+                      <span *ngFor="let z of typeDetails3" class="form-group">
+                        <button mat-raised-button color="warn" type="button" value="BASIC_TYPE_NAME"
+                          formControlName="amb_type" ngDefaultControl class="btn btn-default">{{z.AMB_TYPE}}</button>
+                      </span>
+                      <span *ngFor="let z of typeDetails4" class="form-group">
+                        <button mat-raised-button color="warn" type="button" value="BASIC_TYPE_NAME"
+                          formControlName="amb_type" ngDefaultControl class="btn btn-default">{{z.AMB_TYPE}}</button>
+                      </span>
+                      -
+                      <span *ngFor="let z of typeDetails" class="form-group">
+                        <button mat-raised-button color="warn" type="button" value="BASIC_TYPE_NAME"
+                          formControlName="advance_name_or_basic" ngDefaultControl
+                          class="btn btn-default">{{z.BASIC_TYPE_NAME}}</button>
+                      </span>
+                      <span *ngFor="let z of typeDetails1" class="form-group">
+                        <button mat-raised-button color="warn" type="button" value="ADVANCED_TYPE_NAME"
+                          formControlName="advance_name_or_basic" ngDefaultControl
+                          class="btn btn-default">{{z.ADVANCED_TYPE_NAME}}</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn  btn-sm mr-10 mt-auto float-end">
+                <button mat-raised-button color="primary" type="submit" class="btn btn-outline-primary"
+                  class="btn btn-default"   (click)="book()">BOOK
+                  AMBULANCE</button>
+              </div>
+            </div>
+          </div><br>
+
+
+
+          <div class="row ">
+            <p class="row-title">
+              <b>CAUSES</b>
+            </p>
+            <div>
+              <div class="form-group">
+                <div *ngFor="let item of cause1"  class="btn  btn-sm mr-10">
+                  <button mat-raised-button color="primary" type="button" class="btn btn-outline-primary"
+                    formControlName="cause" ngDefaultControl (click)="selectedcauses(item)">
+                    {{item.CAUSE_TYPE}}</button>
+                    <span class="text-danger" ></span> 
+                  <!-- <span *ngIf="AmbForm.errors?.required">
+                    This field is required
+                  </span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-4">
+              <p class="row-title">VIDEO (OPTIONAL)</p>
+              <div class="box">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="file" name="" value="upload">
+                  </div>
+                  <div class="col-md-6">
+                    <div>
+                      <span><img src="https://via.placeholder.com/140x30"></span>
+                      <span><i class="fa fa-trash-o"></i></span>
+                    </div>
+                    <div>
+                      <span><img src="https://via.placeholder.com/140x30"></span>
+                      <span><i class="fa fa-trash-o"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <p class="row-title">VIDEO (OPTIONAL)</p>
+              <div class="box">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="file" name="" value="upload">
+                  </div>
+                  <div class="col-md-6">
+                    <div>
+                      <span><img src="https://via.placeholder.com/140x30"></span>
+                      <span><i class="fa fa-trash-o"></i></span>
+                    </div>
+                    <div>
+                      <span><img src="https://via.placeholder.com/140x30"></span>
+                      <span><i class="fa fa-trash-o"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <p class="row-title">VIDEO (OPTIONAL)</p>
+              <div class="box">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="file" name="" value="upload">
+                  </div>
+                  <div class="col-md-6">
+                    <div>
+                      <span><img src="https://via.placeholder.com/140x30"></span>
+                      <span><i class="fa fa-trash-o"></i></span>
+                    </div>
+                    <div>
+                      <span><img src="https://via.placeholder.com/140x30"></span>
+                      <span><i class="fa fa-trash-o"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <p class="row-title">TEXT NOTE (OPTIONAL)</p>
+            <div class="col-md-12">
+              <textarea class="form-control" rows="3" placeholder="">
+
+            </textarea>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

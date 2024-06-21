@@ -1,1 +1,182 @@
-<p>first works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Welcome to First Pharmacy</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+</head>
+
+<body>
+    <!-- <app-hometwo></app-hometwo> -->
+
+    <!-- 
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Fixed top</a>
+        </div>
+      </nav> -->
+
+    <div #myElement>
+        <div class="col-md-11 right-content" style="cursor: pointer;">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="logo">
+                        <img src="assets/img/logo.png">&nbsp;
+                        <button mat-raised-button color="primary" id="basic123" type="button"
+                            (click)="bookingService()">
+                            Bookings
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="col-md-2 float-end">
+                    <button mat-raised-button color="primary" style="width: 120px; height: 40px;" type="button"
+                        (click)="showfamily()">
+                        familymembers
+                    </button>
+                </div>
+
+
+                <div class="col-md-2 welcome">
+                    <div class="">
+                        <div class="username float-end" *ngFor="let x of user">
+                            <mat-icon class="icon-text">account_circle</mat-icon>
+                            <h2>Welcome {{x.PATIENT_NAME}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" right-content" style="cursor: pointer;">
+            <div class="">
+                <div class="col-md-6 row">
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="head-title" (click)="bedsideService()">
+                                <div class="media-left ">
+                                    <img src="assets/img/rehabilitation.png" class="mr-3" alt="...">
+                                </div>
+                                <h3>Beside Attendant</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="head-title" (click)="bpmonitorService()">
+                                <div class="media-left ">
+                                    <img src="assets/img/blood-bank.png" class="mr-3" alt="...">
+                                </div>
+                                <h3>BP Monitoring</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 row">
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="head-title" (click)="doctorService()">
+                                <div class="media-left ">
+                                    <img src="assets/img/rehabilitation.png" class="mr-3" alt="...">
+                                </div>
+                                <h3>Doctor Consultation</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="head-title" (click)="mobyService()">
+                                <div class="media-left">
+                                    <img src="assets/img/mother.png" class="mr-3" alt="...">
+                                </div>
+                                <h3>Mother & Baby Care</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 row">
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="head-title" (click)="nurseService()">
+                                <div class="media-left ">
+                                    <img src="assets/img/nurse.png" class="mr-3" alt="...">
+                                </div>
+                                <h3>Nurse</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="head-title" (click)="pregnancyService()">
+                                <div class="media-left">
+                                    <img src="assets/img/pregnancy.png" class="mr-3" alt="...">
+                                </div>
+                                <h3>Pregnancy Care</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 row">
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="head-title" (click)="rehabilitationService()">
+                                <div class="media-left ">
+                                    <img src="assets/img/rehabilitation.png" class="mr-3" alt="...">
+                                </div>
+                                <h3>Rehabilitation</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="head-title" (click)="bloodbankService()">
+                                <div class="media-left ">
+                                    <img src="assets/img/blood-bank.png" class="mr-3" alt="...">
+                                </div>
+                                <h3>Blood Bank</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 row">
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="head-title" (click)="PhysiotheparyService()">
+                                <div class="media-left ">
+                                    <img src="assets/img/physiotheraphy.png" class="mr-3" alt="...">
+                                </div>
+                                <h3>Physiotheraphy</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="head-title" (click)="ambulanceService()">
+                                <div class="media-left ">
+                                    <img src="assets/img/car-accident.png" class="mr-3" alt="..." style="height: 60px;">
+                                </div>
+                                <h3>Ambulance</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

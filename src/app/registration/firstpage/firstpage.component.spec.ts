@@ -6,10 +6,14 @@ describe('FirstpageComponent', () => {
   let component: FirstpageComponent;
   let fixture: ComponentFixture<FirstpageComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ FirstpageComponent ]
+    })
+    .compileComponents();
+  });
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [FirstpageComponent]
-    });
     fixture = TestBed.createComponent(FirstpageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,1 +1,176 @@
-<p>pregnancy works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Welcome to First Pharmacy</title>
+</head>
+
+<body>
+  <div style="display: flex;">
+    <div class="col-lg-1 col-md-1 col-sm-1">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="container-fluid custom-container">
+
+      <div class="row">
+        <div class="col-md-11 right-content">
+
+          <div class="row">
+
+            <div class="col-md-2">
+              <div class="logo">
+                <img src="assets/img/logo.png">
+              </div>
+            </div>
+
+            <div class="col-md-6"></div>
+
+            <div class="col-md-4">
+              <div class="search-bar">
+                <div class="form-group has-search">
+                  <span class="fa fa-search form-control-feedback"></span>
+                  <input type="text" class="form-control" placeholder="SEARCH">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="box">
+                <div class="head-title">
+                  <div class="media-left">
+                    <img src="assets/img/pregnancy.png" class="mr-3" alt="...">
+                  </div>
+                  <h3>Pregnancy Care</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="row box">
+                <div class="col-md-7 ps-0">
+                  <div class="head-title">
+                    <div class="media">
+                      <div class="media-left">
+                        <img src="assets/img/11.png" class="mr-3" alt="...">
+                      </div>
+                      <div class="media-body2">
+                        <h4 class="mb-0"><small>{{this.storage.PATIENT_MAIL_ID}}</small></h4>
+                        <h6 class="mb-0"><small>{{this.storage.PATIENT_ID}}</small></h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="head-title-btn" >
+                <input type="button" value="Proceed" name="" class="btn btn-default" >
+              </div>
+            </div>
+          </div><br><br>
+
+
+
+          <!-- <div class="col-md-4">
+            <div class="box" [formGroup]="pregCareForm">
+              <p class="row-title">PERIODIC TREATMENT</p>
+           
+              <div class="form-group">
+                <select class="form-control input-bg" formControlName="pwc_service">
+                  <option value="" disabled>Pregency Stages</option>
+                  <option *ngFor="let item of pregC" [value]="item.PWC_P_T_ID">{{item.PWC_P_T_NAME}}</option>
+                </select>
+              </div>
+            </div>
+          </div> -->
+
+
+          <div class="row" [formGroup]="pregCareForm">
+            <p class="row-title">PERIODIC TREATMENT</p>
+            <div class="col-md-2 touch" *ngFor="let item of pregC">
+              <nav class="cause-list" >
+                <ul class="nav justified text-center" >
+                  <li class="row">
+                    <a class="nav-link" value="item.PWC_P_T_ID" (click)="selectedpwc(item)"(click)="pregSpecCare(item.PWC_P_T_NAME)" >{{item.PWC_P_T_NAME}}</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+
+          <div class="row" [formGroup]="pregCareForm" >
+            <p class="row-title">SPECIALIZATIONS</p>
+            <div class="col-md-2 touch" *ngFor="let item of pregS" >
+              <nav class="cause-list">
+                <ul class="nav justified text-center">
+                  <li class="row">
+                    <a class="nav-link" value='item.SPECIALIZATION_ID'
+                      (click)="pregSpec(item.SPECIALIZATION_NAME)" (click)="selectedspecialization(item)">
+                      {{item.SPECIALIZATION_NAME}}</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+
+          <!-- <div [formGroup]="pregCareForm">
+            <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color" style="width: 100%;">
+              <div class="row">
+                <p class="row-title">SPECIALIZATION</p>
+                <div class="col-md-2 touch" *ngFor="let x of pregS">
+                  <nav class="cause-list">
+                    <div class="card bg-white text-white h-100 mt-3 mb-4">
+                      <mat-button-toggle mat-raised-button color="primary" value="item.SPECIALIZATION_ID">
+                        {{x.SPECIALIZATION_NAME}}</mat-button-toggle>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </mat-button-toggle-group><br><br>
+          </div>
+-->
+
+    
+
+
+
+          <!-- <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+            <div class="row" [formGroup]="pregCareForm">
+              <p class="row-title">PERIODIC TREATMENT</p>
+              <div class="col-md-2 touch" class="form-group" *ngFor="let item of pregC">
+                <nav class="cause-list">
+                  <div class="card bg-white text-white h-100 mt-3 mb-4">
+                    <mat-button-toggle mat-raised-button color="primary" value="item.PWC_P_T_ID">{{item.PWC_P_T_NAME}}
+                    </mat-button-toggle>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </mat-button-toggle-group>  -->
+
+        
+
+
+         
+          
+
+
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </div>
+
+</body>
+
+</html>

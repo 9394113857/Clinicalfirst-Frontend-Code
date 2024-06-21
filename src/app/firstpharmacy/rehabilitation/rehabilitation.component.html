@@ -1,1 +1,148 @@
-<p>rehabilitation works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Welcome to First Pharmacy</title>
+
+</head>
+
+<body>
+    <div style="display: flex;">
+        <div class="col-lg-1 col-md-1 col-sm-1">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="container-fluid custom-container">
+
+            <div class="row">
+
+                <div class="col-md-11 right-content">
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="logo">
+                                <img src="assets/img/logo.png">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6"></div>
+
+                        <div class="col-md-4">
+                            <div class="search-bar">
+                                <div class="form-group has-search">
+                                    <span class="fa fa-search form-control-feedback"></span>
+                                    <input type="text" class="form-control" placeholder="SEARCH">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="box">
+                                <div class="head-title">
+                                    <div class="media-left ">
+                                        <img src="assets/img/rehabilitation.png" class="mr-3" alt="...">
+                                    </div>
+                                    <h3>Rehabilitation</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-md-4">
+                            <div class="box2">
+                                <div class="head-title">
+                                    <h3 align="center" class="book" (click)="book()">Book appointment </h3>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="col-md-3">
+                            <div class="btn  btn-sm mr-10 mt-auto float-end">
+                                <button mat-raised-button color="primary" type="button" class="btn btn-outline-primary"
+                                    class="btn btn-default" (click)="book()">Book appointment</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <div class="box">
+                                <div class="media">
+                                    <div class="media-left ">
+                                        <img src="assets/img/64.png" class="mr-3" alt="...">
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="mt-0">Ethan Fuller</h4>
+                                        <h6 class="mt-0">Information</h6><br>
+                                        <p>Will you do the same for me? It's time to face the music I'm no longer your
+                                            muse.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="text-muted mb-0">Parameter</p>
+                                        <h6>Information</h6>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="text-muted mb-0">Parameter</p>
+                                        <h6>Detail</h6>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="text-muted mb-0">Parameter</p>
+                                        <h6>Detail</h6>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="text-muted mb-0">Parameter</p>
+                                        <h6>Information</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="box" [formGroup]="oppDetailForm">
+                                <p>THERAPY</p>
+                                <div class="form-group">
+                                    <select class="form-control input-bg" formControlName="THERAPY_NAME"
+                                        (change)="onChangeTherapy($any($event.target).value)">
+                                        <option value="" disabled>Therapy Names</option>
+                                        <option *ngFor="let x of Therapy1" [value]="x.THERAPY_NAME">{{x.THERAPY_NAME}}
+                                        </option>
+                                    </select>
+                                </div>
+                                <br>
+                                <p>DEPENDENT NAMES</p>
+                                <div class="form-group">
+                                    <select class="form-control input-bg" formControlName="TYPE_NAME">
+                                        <option value="" disabled>Dependent Names</option>
+                                        <option *ngFor="let x of Therapy">{{x.TYPE_NAME}}</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <p>Shuttering is one of the most common speech disorders, with upto 10% of all kids
+                                    struggling with it.
+                                    As a result, most SLPs have a tremondous amount of experience in helping kids with
+                                    this condition</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
