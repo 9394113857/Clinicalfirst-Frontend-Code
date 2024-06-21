@@ -1,0 +1,22 @@
+# Install Dependencies:
+npm install
+# After npm install completes, you should see a node_modules folder in your project directory. This means all dependencies have been installed.
+
+# To start the Angular development server, run:
+npm start
+# This usually runs your application on http://localhost:4200.
+
+# Navigate to the Project Root Directory:
+cd D:\Interview\Clinicalfirst-Frontend-Code
+
+# Create the docs Directory:
+mkdir docs
+
+# Navigate to the docs Directory:
+cd docs
+
+# Create the notes.txt File:
+echo Initial notes for the project > notes.txt
+
+
+
