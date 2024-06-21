@@ -59,3 +59,10 @@ Solution Steps:
 npm update ngx-slickjs
 Check TypeScript Version Compatibility: Verify that your TypeScript version in package.json is compatible with the version required by ngx-slickjs. Sometimes, mismatches in TypeScript versions can lead to type definition issues.
 
+The error you're encountering with ngx-slickjs is related to the ModuleWithProviders type which, starting from Angular 9, requires a generic type argument. To fix this, you need to update the ngx-slickjs library to be compatible with the Angular version you're using or patch the library code to add the generic type argument.
+Here’s how you can resolve the issue:
+1.	Update ngx-slickjs: First, try to update the library to the latest version. Run the following command in your project directory:
+npm install ngx-slickjs@latest
+
+
+

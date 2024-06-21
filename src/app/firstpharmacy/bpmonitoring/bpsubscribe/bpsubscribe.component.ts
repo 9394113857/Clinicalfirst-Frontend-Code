@@ -13,45 +13,44 @@ export class BpsubscribeComponent implements OnInit {
   bpsubForm: FormGroup;
   storage: any;
 
-  constructor(private fb:FormBuilder,private service:FirstPharmacyService, private route:ActivatedRoute, private router: Router) {
-    this.bpsubForm= this.fb.group({
-      PATIENT_ID:['',Validators.required],
-      NEC_ID:['',Validators.required],
-      BOOKING_DATE:['',Validators.required],
-      HOUSE_NO:['',Validators.required],
-      FLOOR_NO:['',Validators.required],
-      LOCALITY:['',Validators.required],
-      CITY:['',Validators.required], 
-      
-      
-    })
-   }
+  constructor(
+    private fb: FormBuilder,
+    private service: FirstPharmacyService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
+    this.bpsubForm = this.fb.group({
+      PATIENT_ID: ['', Validators.required],
+      NEC_ID: ['', Validators.required],
+      BOOKING_DATE: ['', Validators.required],
+      HOUSE_NO: ['', Validators.required],
+      FLOOR_NO: ['', Validators.required],
+      LOCALITY: ['', Validators.required],
+      CITY: ['', Validators.required],
+    });
+  }
 
   ngOnInit(): void {
     this.getlist();
   }
-  getlist() {
-    this.service.getItem1().subscribe(res => {
-      console.log(res)
-      this.necDetail = res
-     
-    })
+
+  getlist(): void {
+    this.service['getItem1']().subscribe((res: any) => {
+      console.log(res);
+      this.necDetail = res;
+    });
   }
-  
-  bookBp(){
-    console.log(this.bpsubForm.value)
-    this.storage = JSON.parse(sessionStorage.getItem('userdetails') || '{}')
-    console.log(this.storage)
-    const obj ={...this.bpsubForm.value,PATIENT_ID:this.storage.PATIENT_ID,NEC_ID:this.necDetail[0].NEC_ID}
-    console.log(obj)
-    this.service.bpBook(obj).subscribe((res:any) =>{
-    console.log(res)
-    this.router.navigate(['/bp'])
-  })
- 
-  window.alert('Your Appointment has been Booked!');
-  this.router.navigate(['/main'])
-}
 
-
+  bookBp(): void {
+    console.log(this.bpsubForm.value);
+    this.storage = JSON.parse(sessionStorage.getItem('userdetails') || '{}');
+    console.log(this.storage);
+    const obj = { ...this.bpsubForm.value, PATIENT_ID: this.storage.PATIENT_ID, NEC_ID: this.necDetail[0].NEC_ID };
+    console.log(obj);
+    this.service['bpBook'](obj).subscribe((res: any) => {
+      console.log(res);
+      window.alert('Your Appointment has been Booked!');
+      this.router.navigate(['/main']);
+    });
+  }
 }

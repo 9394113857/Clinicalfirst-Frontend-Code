@@ -16,14 +16,18 @@ export class NursubComponent implements OnInit {
   storage: any;
   Nurse: any;
 
-  constructor(private fb:FormBuilder,private service:FirstPharmacyService, private route:ActivatedRoute, private router: Router,) { 
-    
-    this.nursubForm= this.fb.group({
-      PATIENT_ID:['',Validators.required],
-      NEC_ID:['',Validators.required],
-      NUR_SERVICE_ID:['',Validators.required],
-      NUR_RECOMMEND_ID:['',Validators.required]
-    })
+  constructor(
+    private fb: FormBuilder,
+    private service: FirstPharmacyService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
+    this.nursubForm = this.fb.group({
+      PATIENT_ID: ['', Validators.required],
+      NEC_ID: ['', Validators.required],
+      NUR_SERVICE_ID: ['', Validators.required],
+      NUR_RECOMMEND_ID: ['', Validators.required]
+    });
   }
 
   ngOnInit(): void {
@@ -31,48 +35,49 @@ export class NursubComponent implements OnInit {
     this.getOppType();
     this.getNurType();
   }
-  getlist() {
-    this.service.getItem1().subscribe(res => {
-      console.log(res)
-      this.necDetails = res
-     
-    })
+
+  getlist(): void {
+    this.service['getItem1']().subscribe((res: any) => {
+      console.log(res);
+      this.necDetails = res;
+    });
   }
 
-  getOppType() {
-    this.service.getOppurtunitie().subscribe(res =>{
-      console.log(res)
-      this.NUR_ID=res
-    })
+  getOppType(): void {
+    this.service['getOppurtunitie']().subscribe((res: any) => {
+      console.log(res);
+      this.NUR_ID = res;
+    });
   }
 
-  getNurType() {
-    this.service.getOppurtunity().subscribe(res =>{
-      console.log(res)
-      this.NUR_RECOMMENDATION_TYPE=res
-    })
+  getNurType(): void {
+    this.service['getOppurtunity']().subscribe((res: any) => {
+      console.log(res);
+      this.NUR_RECOMMENDATION_TYPE = res;
+    });
   }
 
-  bookNu(){
-    console.log(this.nursubForm.value)
-    this.storage = JSON.parse(sessionStorage.getItem('userdetails') || '{}')
-    console.log(this.storage)
-    const obj ={...this.nursubForm.value,PATIENT_ID:this.storage.PATIENT_ID,NEC_ID:this.necDetails[0].NEC_ID}
+  bookNu(): void {
+    console.log(this.nursubForm.value);
+    this.storage = JSON.parse(sessionStorage.getItem('userdetails') || '{}');
+    console.log(this.storage);
+    const obj = { ...this.nursubForm.value, PATIENT_ID: this.storage.PATIENT_ID, NEC_ID: this.necDetails[0].NEC_ID };
 
-    console.log(obj)
-    
-    this.service.bookNur(obj).subscribe((res:any) =>{
-    console.log(res)
-  })
- 
-  window.alert('Your Appointment has been Booked!');
-  this.router.navigate(['/main'])
-}
-onChangeService(NUR_SERVICE_ID: any) {
-  const obj = {NUR_SERVICE_ID} 
-  this.service.getNurseTypes(obj).subscribe(res => {
-    console.log(res)
-    this.Nurse = res;
-  });
-}
+    console.log(obj);
+
+    this.service['bookNur'](obj).subscribe((res: any) => {
+      console.log(res);
+    });
+
+    window.alert('Your Appointment has been Booked!');
+    this.router.navigate(['/main']);
+  }
+
+  onChangeService(NUR_SERVICE_ID: any): void {
+    const obj = { NUR_SERVICE_ID };
+    this.service.getNurseTypes(obj).subscribe((res: any) => {
+      console.log(res);
+      this.Nurse = res;
+    });
+  }
 }
