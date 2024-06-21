@@ -1,0 +1,2 @@
+Example tsconfig.json Configuration:
+Ensure your tsconfig.json has necessary settings for Angular and TypeScript:
