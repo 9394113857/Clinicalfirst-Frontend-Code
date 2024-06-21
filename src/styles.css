@@ -1,7 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Reset default margin and padding */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+  
+  /* Example of setting a global font-size and line-height */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Example of setting background color for the body */
+  body {
+    background-color: #f0f0f0;
+  }
+  
+  /* Example of styling links globally */
+  a {
+    text-decoration: none;
+    color: #007bff; /* Blue color for links */
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Example of centering elements */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centering the container */
+    padding: 0 20px;
+  }
+  
+  /* Example of styling headings */
+  h1, h2, h3 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Example of styling buttons */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Example of styling form elements */
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Example of responsive design */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 0 10px;
+    }
+  }
+  
