@@ -1,0 +1,39 @@
+In this we have lot of files like whole components etc:-
+
+src/app/firstpharmacy/
+The files firstpharmacy.module.ts and firstpharmacy-routing.module.ts 
+are essential parts of an Angular module and its routing configuration, respectively.
+
+=======================================================================================
+
+Switch to:
+src/app
+ng generate module firstpharmacy # see because of this command folder also creted right
+
+# This command will create firstpharmacy.module.ts 
+where you can define module-specific configurations, imports, and providers.
+
+=======================================================================================
+
+src/app
+ng generate module firstpharmacy-routing --module=firstpharmacy # routing file will be crted right
+
+# This command will create firstpharmacy-routing.module.ts 
+specifically for routing within the firstpharmacy module.
+
+=======================================================================================
+
+Now, we crete cpmponents in this path:-
+src/app/firstpharmacy
+
+ng generate component <component-name>
+
+like how many we want we willl crete one-by-one like this got it.
+
+=====================================================================================
+
+
+
+
+
+

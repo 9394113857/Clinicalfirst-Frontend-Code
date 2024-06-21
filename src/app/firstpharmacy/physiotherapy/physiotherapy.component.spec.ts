@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { PhysiotherapyComponent } from './physiotherapy.component';
+
+describe('PhysiotherapyComponent', () => {
+  let component: PhysiotherapyComponent;
+  let fixture: ComponentFixture<PhysiotherapyComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [PhysiotherapyComponent]
+    });
+    fixture = TestBed.createComponent(PhysiotherapyComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

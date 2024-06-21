@@ -1,0 +1,3 @@
+# Switch first where to generate like use cd and then generate accordingly:-
+ng generate component <component-name>
+
