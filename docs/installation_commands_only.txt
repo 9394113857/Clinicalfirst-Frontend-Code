@@ -1,19 +1,34 @@
-# Install Angular Material if not already done
+# 1. Install Angular Material if not already done
 ng add @angular/material
 
-# Install ReactiveFormsModule
+# Purpose: Angular Material provides UI components and styles for building modern Angular applications.
+# Description: Installing Angular Material adds pre-built UI components like buttons, forms, dialogs, and more, styled with Material Design principles, enhancing the look and feel of your application.
+
+# 2. Install ReactiveFormsModule
 npm install @angular/forms --save
 
-# Fix Module Import Issue for 'ngx-slickjs'
-# Check Package Installation
+# Purpose: ReactiveFormsModule enables the use of reactive forms in Angular applications.
+# Description: Reactive forms provide a way to manage and validate form input fields in a reactive way. This package includes modules and classes to handle form controls, form groups, validators, and more, making it easier to build complex forms with Angular.
+
+# 3. Fix Module Import Issue for 'ngx-slickjs'
+# 3.1. Check Package Installation
 npm install ngx-slickjs --save
 # Or with yarn:
 # yarn add ngx-slickjs
 
-# Update ngx-slickjs Version
+# Purpose: ngx-slickjs is a wrapper library for Slick carousel in Angular applications.
+# Description: ngx-slickjs integrates Slick carousel functionality into Angular projects, allowing you to create responsive, touch-enabled carousels for displaying images, slideshows, or other content. Installing this package provides components and directives to use Slick carousel easily within Angular templates.
+
+# 3.2. Update ngx-slickjs Version
 npm install ngx-slickjs@latest --save
 # Or with yarn:
 # yarn add ngx-slickjs@latest
 
-# Update ngx-slickjs Package
+# Purpose: Updating ngx-slickjs to the latest version ensures compatibility and incorporates bug fixes or new features.
+# Description: It's important to keep ngx-slickjs updated to benefit from improvements in performance, compatibility with newer Angular versions, and to resolve any known issues or bugs from previous versions.
+
+# 3.3. Update ngx-slickjs Package
 npm update ngx-slickjs
+
+# Purpose: Update ngx-slickjs to the latest available version in your project.
+# Description: Running npm update ngx-slickjs ensures that your project is using the latest version of the ngx-slickjs package, incorporating any updates or fixes released since the package was last installed or updated.
