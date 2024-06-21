@@ -1,3 +1,9 @@
 when we starts vscode cmd is under root of the project only so accordingly what we understand 
 and we switch to those paths and run accordingly.
 
+
+Yes, after making any changes to your Angular application code, 
+such as updating packages, modifying component logic, or adjusting configuration files, 
+you typically need to recompile and serve your application using ng serve.
+
+

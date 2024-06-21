@@ -5,13 +5,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Welcome to First Pharmacy</title>
-
 </head>
 
 <body>
     <div class="container-fluid custom-container">
-        <form >
-            <div class="row"  [formGroup]="pregCareForm">
+        <form [formGroup]="pregCareForm">
+            <div class="row">
                 <div class="col-md-1">
                     <div class="left-menu">
                         <div class="menu-top">
@@ -77,23 +76,20 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-5 px-0"  [formGroup]="pregCareForm">
-                                    <div *ngFor="let item of admin2">
-                                    <div formControlName="PWC_P_T_ID" class="form-group"></div>
-                                </div>
-                                    <div class="mid-btn-grp1" *ngFor="let item of admin1" class="form-group">
-                                        
+                                <div class="col-md-5 px-0">
+                                    <div *ngFor="let item of admin2" class="form-group">
+                                        <!-- Display admin2 properties -->
+                                    </div>
+                                    <div *ngFor="let item of admin1" class="form-group">
                                         <span>
-                                            <input type="button" name=""
-                                                class="btn btn-default" formControlName="SPECIALIZATION_ID " >{{item.SPECIALIZATION_NAME}}
+                                            <input type="button" name="" class="btn btn-default"
+                                                formControlName="SPECIALIZATION_ID">{{item.SPECIALIZATION_NAME}}
                                         </span>
                                     </div>
                                 </div>
-
-                                
                             </div>
                         </div>
-                    
+
                         <div class="col-md-4" (click)="Book()">
                             <div class="head-title-btn">
                                 <input type="button" value="Book Appointment" name="" class="btn btn-default">
@@ -104,11 +100,11 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="box">
-                                <div class="media">
-                                    <div class="media-left ">
+                                <div class="media" *ngFor="let item of admin1">
+                                    <div class="media-left">
                                         <img src="assets/img/64.png" class="mr-3" alt="...">
                                     </div>
-                                    <div class="media-body" *ngFor="let item of admin">
+                                    <div class="media-body">
                                         <h4 class="mt-0">{{item.Doctor_Name}}</h4>
                                         <h6 class="mt-0">{{item.Doctor_Department}}</h6><br>
                                         <div formControlName="PATIENT_ID"></div>
@@ -141,27 +137,27 @@
                             <div class="box">
                                 <p>SCHEDULE APPOINTMENT</p>
                                 <div class="row">
-                                    <div class="col-md-12" [formGroup]="pregCareForm">
-                                        <div  class="form-group">
-                                            <input type="TEXT" class="form-control" placeholder="Location" name=""
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="TEXT" class="form-control" placeholder="Location"
                                                 formControlName="LOCATION">
-
                                         </div>
                                     </div>
                                 </div>
                                 <br>
-                                <div class="col-md-12" [formGroup]="pregCareForm">
-                                    <div  class="form-group">
-                                        <input type="number" class="form-control" placeholder="Price" name=""
-                                            formControlName="PRICE">
-
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" placeholder="Price"
+                                                formControlName="PRICE">
+                                        </div>
                                     </div>
-                                    <div class="date-custom" class="form-group">
-                                        <input type="datetime-local" class="form-control" placeholder="Date" name=""
-                                            formControlName="DATE">
-
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="datetime-local" class="form-control" placeholder="Date"
+                                                formControlName="DATE">
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -188,7 +184,6 @@
     </div>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-  
 </body>
 
 </html>

@@ -59,24 +59,3 @@ Solution Steps:
 npm update ngx-slickjs
 Check TypeScript Version Compatibility: Verify that your TypeScript version in package.json is compatible with the version required by ngx-slickjs. Sometimes, mismatches in TypeScript versions can lead to type definition issues.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,19 @@
+# Install Angular Material if not already done
+ng add @angular/material
+
+# Install ReactiveFormsModule
+npm install @angular/forms --save
+
+# Fix Module Import Issue for 'ngx-slickjs'
+# Check Package Installation
+npm install ngx-slickjs --save
+# Or with yarn:
+# yarn add ngx-slickjs
+
+# Update ngx-slickjs Version
+npm install ngx-slickjs@latest --save
+# Or with yarn:
+# yarn add ngx-slickjs@latest
+
+# Update ngx-slickjs Package
+npm update ngx-slickjs

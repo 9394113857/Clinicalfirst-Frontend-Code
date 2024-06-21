@@ -1,32 +1,32 @@
 {
-  "compileOnSave": false, // Disable automatic compilation on save
+  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./", // Base directory to resolve non-absolute module names
-    "outDir": "./dist/out-tsc", // Output directory for compilation output
-    "forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
-    "strict": true, // Enable all strict type-checking options
-    "noImplicitOverride": true, // Report errors when overriding properties/methods without explicit override keyword
-    "noPropertyAccessFromIndexSignature": true, // Disallow accessing properties via index signatures
-    "noImplicitReturns": true, // Report error on functions with missing return statements
-    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statements
-    "sourceMap": true, // Generate corresponding .map files for easier debugging
-    "declaration": false, // Do not generate .d.ts declaration files
-    "downlevelIteration": true, // Emit ES5-compatible iteration when targeting ES5 or lower
-    "experimentalDecorators": true, // Enable experimental support for decorators
-    "moduleResolution": "node", // Resolve modules using Node.js style
-    "importHelpers": true, // Import emit helpers from tslib
-    "target": "ES2022", // Specify ECMAScript target version
-    "module": "ES2022", // Specify module code generation
-    "useDefineForClassFields": false, // Do not use 'var' for class field declarations
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
     "lib": [
       "ES2022",
       "dom"
-    ] // Specify the library files to be included in the compilation
+    ]
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false, // Disable legacy message ID format for i18n
-    "strictInjectionParameters": true, // Ensure strict injection parameter checking
-    "strictInputAccessModifiers": true, // Ensure strict input access modifiers checking
-    "strictTemplates": true // Enable strict template type checking
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   }
 }
